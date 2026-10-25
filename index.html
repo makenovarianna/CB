@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicBox — Autumn Stories</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Oswald", Arial, sans-serif;
+        }
+
+        .playfair {
+            font-family: "Playfair Display", serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#f3e4d0] text-[#3a2521] transition-colors duration-500 dark:bg-[#21151a] dark:text-[#f8ead3]">
+
+    <!-- HEADER -->
+    <header class="relative mx-auto max-w-[1180px] px-6 pb-10 pt-14 text-center">
+
+        <!-- Переключатель темы -->
+        <div class="mb-5 lg:absolute lg:right-6 lg:top-6 lg:mb-0">
+            <button
+                id="themeToggle"
+                class="rounded-[18px] border border-[#a94f32] bg-[#fff8ed] px-5 py-3 text-sm font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:bg-[#3b2528] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]"
+            >
+                ☀️ Светлая тема
+            </button>
+        </div>
+
+        <!-- Badge -->
+        <div class="inline-block rounded-full border border-[#a94f32] px-4 py-2 text-xs tracking-[2px] text-[#a94f32] dark:border-[#e5a45b] dark:text-[#e5a45b]">
+            OMG COMICS • AUTUMN EDITION
+        </div>
+
+        <h1 class="playfair my-5 text-6xl font-bold leading-none text-[#a94f32] sm:text-7xl md:text-8xl lg:text-9xl dark:text-[#e5a45b]">
+            ComicBox
+        </h1>
+
+        <p class="mx-auto max-w-[650px] text-lg text-[#73584c] dark:text-[#d5bfa6]">
+            Уютное место для комиксов, новых историй и осеннего вдохновения
+        </p>
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="mx-auto mb-16 w-[92%] max-w-[1150px]">
+
+        <h2 class="playfair mb-5 mt-9 text-3xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+            Наша коллекция
+        </h2>
+
+        <!-- СТАТИСТИКА -->
+        <section class="grid grid-cols-1 gap-[18px] md:grid-cols-3">
+
+            <div class="rounded-[25px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-6 shadow-xl transition hover:-translate-y-1 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+                <strong class="block text-4xl text-[#a94f32] dark:text-[#e5a45b]">
+                    128 640
+                </strong>
+                <span class="text-[#73584c] dark:text-[#d5bfa6]">
+                    комиксов в коллекции
+                </span>
+            </div>
+
+            <div class="rounded-[25px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-6 shadow-xl transition hover:-translate-y-1 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+                <strong class="block text-4xl text-[#a94f32] dark:text-[#e5a45b]">
+                    3 870
+                </strong>
+                <span class="text-[#73584c] dark:text-[#d5bfa6]">
+                    опубликовано недавно
+                </span>
+            </div>
+
+            <div class="rounded-[25px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-6 shadow-xl transition hover:-translate-y-1 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+                <strong class="block text-4xl text-[#a94f32] dark:text-[#e5a45b]">
+                    24 915
+                </strong>
+                <span class="text-[#73584c] dark:text-[#d5bfa6]">
+                    историй создано читателями
+                </span>
+            </div>
+
+        </section>
+
+
+        <h2 class="playfair mb-5 mt-9 text-3xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+            Что можно сделать?
+        </h2>
+
+
+        <!-- КАРТОЧКИ -->
+        <section class="grid grid-cols-1 gap-[22px] md:grid-cols-2 lg:grid-cols-3">
+
+
+            <!-- 01 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    01
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Обсуждение
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Делитесь впечатлениями, обсуждайте любимых героев, теории и неожиданные повороты вместе с другими читателями.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Обсуждение» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Обсудить
+                </a>
+            </article>
+
+
+            <!-- 02 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    02
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Новинки авторов
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Каждый день появляются новые главы и выпуски. Сейчас недавно опубликовано 3 870 новых историй разных жанров.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Новинки авторов» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Смотреть
+                </a>
+            </article>
+
+
+            <!-- 03 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    03
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Комиксы по вкусу
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Выбирайте настроение и жанр: романтика, фэнтези, хоррор, приключения, юмор или повседневность.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Комиксы по вкусу» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Выбрать
+                </a>
+            </article>
+
+
+            <!-- 04 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    04
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Читать вечером
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Соберите личную коллекцию историй и возвращайтесь к ним с чашкой горячего напитка. Идеально для спокойного вечера.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Читать вечером» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Добавить
+                </a>
+            </article>
+
+
+            <!-- 05 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    05
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Избранное
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Сохраняйте любимые выпуски, чтобы не потерять их. Соберите собственную маленькую библиотеку.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Избранное» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Сохранить
+                </a>
+            </article>
+
+
+            <!-- 06 -->
+            <article class="flex min-h-[425px] flex-col overflow-hidden rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-[22px] shadow-xl transition hover:-translate-y-2 dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d]">
+
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                    06
+                </div>
+
+                <h2 class="playfair mb-3 text-2xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                    Осенний вайб
+                </h2>
+
+                <p class="flex-1 font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                    Подборка историй с дождём, жёлтыми листьями, уютными домами и тёплыми персонажами.
+                </p>
+
+                <a href="#"
+                   onclick="showToast('Раздел «Осенний вайб» открыт!'); return false;"
+                   class="mt-5 block rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 text-center font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]">
+                    Открыть
+                </a>
+            </article>
+
+
+            <!-- 07 БОЛЬШАЯ КАРТОЧКА -->
+            <article class="lg:col-span-3 grid gap-7 rounded-[28px] border border-[#5a3b3d]/15 bg-gradient-to-br from-[#fff8ed] to-[#f8ead9] p-7 shadow-xl dark:border-white/10 dark:from-[#3b2528] dark:to-[#4a2d2d] lg:grid-cols-[1fr_1.5fr]">
+
+                <div class="flex flex-col justify-center">
+
+                    <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#d98945] font-bold text-white dark:bg-[#c75b3c]">
+                        07
+                    </div>
+
+                    <h2 class="playfair mb-3 text-3xl font-bold text-[#a94f32] dark:text-[#e5a45b]">
+                        Написать свою историю
+                    </h2>
+
+                    <p class="font-sans leading-7 text-[#73584c] dark:text-[#d5bfa6]">
+                        Придумай собственный комикс прямо на сайте: выбери название, жанр и коротко расскажи, о чём будет твоя история.
+                    </p>
+
+                </div>
+
+
+                <!-- ФОРМА -->
+                <form id="storyForm" class="grid gap-3">
+
+                    <input
+                        id="storyTitle"
+                        type="text"
+                        placeholder="Название истории"
+                        required
+                        class="w-full rounded-[14px] border border-black/10 bg-[#f3e4d0] px-4 py-3 text-[#3a2521] outline-none transition focus:border-[#a94f32] dark:border-white/10 dark:bg-[#21151a] dark:text-[#f8ead3] dark:focus:border-[#e5a45b]"
+                    >
+
+                    <select
+                        class="w-full rounded-[14px] border border-black/10 bg-[#f3e4d0] px-4 py-3 text-[#3a2521] outline-none focus:border-[#a94f32] dark:border-white/10 dark:bg-[#21151a] dark:text-[#f8ead3] dark:focus:border-[#e5a45b]"
+                    >
+                        <option>Романтика</option>
+                        <option>Фэнтези</option>
+                        <option>Хоррор</option>
+                        <option>Приключения</option>
+                        <option>Комедия</option>
+                    </select>
+
+                    <textarea
+                        placeholder="Напиши идею своей истории..."
+                        required
+                        class="min-h-[100px] w-full resize-y rounded-[14px] border border-black/10 bg-[#f3e4d0] px-4 py-3 text-[#3a2521] outline-none focus:border-[#a94f32] dark:border-white/10 dark:bg-[#21151a] dark:text-[#f8ead3] dark:focus:border-[#e5a45b]"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="w-fit rounded-[18px] border border-[#a94f32] bg-transparent px-5 py-3 font-bold text-[#3a2521] transition hover:-translate-y-1 hover:bg-[#a94f32] hover:text-white dark:border-[#e5a45b] dark:text-[#f8ead3] dark:hover:bg-[#e5a45b] dark:hover:text-[#21151a]"
+                    >
+                        Опубликовать идею
+                    </button>
+
+                </form>
+
+            </article>
+
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="rounded-t-[35px] bg-[#fff8ed] p-8 text-center text-[#73584c] dark:bg-[#3b2528] dark:text-[#d5bfa6]">
+
+        <p class="mb-3">
+            ComicBox — место, где осеннее настроение превращается в истории
+        </p>
+
+        <div>
+            <a href="#" class="mx-2 text-[#a94f32] dark:text-[#e5a45b]">
+                VK
+            </a>
+
+            <a href="#" class="mx-2 text-[#a94f32] dark:text-[#e5a45b]">
+                Telegram
+            </a>
+
+            <a href="#" class="mx-2 text-[#a94f32] dark:text-[#e5a45b]">
+                Instagram
+            </a>
+
+            <a href="mailto:support@comics.ru" class="mx-2 text-[#a94f32] dark:text-[#e5a45b]">
+                Техподдержка
+            </a>
+        </div>
+
+    </footer>
+
+
+    <!-- УВЕДОМЛЕНИЕ -->
+    <div
+        id="toast"
+        class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-5 rounded-[15px] border border-[#a94f32] bg-[#fff8ed] px-5 py-3 opacity-0 transition-all duration-300 dark:border-[#e5a45b] dark:bg-[#3b2528]"
+    ></div>
+
+
+    <!-- КНОПКА НАВЕРХ -->
+    <button
+        id="top"
+        class="invisible fixed bottom-6 right-6 flex h-12 w-12 translate-y-3 items-center justify-center rounded-full bg-[#a94f32] text-2xl text-white opacity-0 transition-all duration-300 hover:-translate-y-1 dark:bg-[#e5a45b] dark:text-[#21151a]"
+    >
+        ↑
+    </button>
+
+
+    <script>
+
+        // =========================
+        // ТЕМА
+        // =========================
+
+        const themeToggle = document.getElementById("themeToggle");
+        const savedTheme = localStorage.getItem("comic-theme");
+
+        function applyTheme(isLight) {
+
+            if (isLight) {
+                document.documentElement.classList.remove("dark");
+                themeToggle.textContent = "🌙 Тёмная тема";
+                localStorage.setItem("comic-theme", "light");
+            } else {
+                document.documentElement.classList.add("dark");
+                themeToggle.textContent = "☀️ Светлая тема";
+                localStorage.setItem("comic-theme", "dark");
+            }
+        }
+
+        applyTheme(savedTheme === "light");
+
+
+        themeToggle.addEventListener("click", () => {
+
+            const isCurrentlyDark =
+                document.documentElement.classList.contains("dark");
+
+            applyTheme(isCurrentlyDark);
+
+        });
+
+
+        // =========================
+        // УВЕДОМЛЕНИЕ
+        // =========================
+
+        function showToast(message) {
+
+            const toast = document.getElementById("toast");
+
+            toast.textContent = message;
+
+            toast.classList.remove(
+                "opacity-0",
+                "translate-y-5"
+            );
+
+            toast.classList.add(
+                "opacity-100",
+                "translate-y-0"
+            );
+
+            setTimeout(() => {
+
+                toast.classList.remove(
+                    "opacity-100",
+                    "translate-y-0"
+                );
+
+                toast.classList.add(
+                    "opacity-0",
+                    "translate-y-5"
+                );
+
+            }, 2200);
+        }
+
+
+        // =========================
+        // ФОРМА
+        // =========================
+
+        document
+            .getElementById("storyForm")
+            .addEventListener("submit", (event) => {
+
+                event.preventDefault();
+
+                showToast("История сохранена как идея!");
+
+                event.target.reset();
+
+            });
+
+
+        // =========================
+        // КНОПКА НАВЕРХ
+        // =========================
+
+        const topButton = document.getElementById("top");
+
+        function updateTopButton() {
+
+            if (window.scrollY > 300) {
+
+                topButton.classList.remove(
+                    "opacity-0",
+                    "invisible",
+                    "translate-y-3"
+                );
+
+                topButton.classList.add(
+                    "opacity-100",
+                    "visible",
+                    "translate-y-0"
+                );
+
+            } else {
+
+                topButton.classList.remove(
+                    "opacity-100",
+                    "visible",
+                    "translate-y-0"
+                );
+
+                topButton.classList.add(
+                    "opacity-0",
+                    "invisible",
+                    "translate-y-3"
+                );
+            }
+        }
+
+        window.addEventListener(
+            "scroll",
+            updateTopButton,
+            { passive: true }
+        );
+
+
+        topButton.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        updateTopButton();
+
+    </script>
+
+</body>
+</html>
